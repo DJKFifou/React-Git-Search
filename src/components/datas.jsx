@@ -1,6 +1,4 @@
 export default function Datas({datas, onClick}) {
-    console.log('datas : ', datas);
-    console.log('onClick : ', onClick);
     return (
         <ul className="list-disc pl-4">
             {datas?.items.map((item) => (

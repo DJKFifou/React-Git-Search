@@ -1,5 +1,4 @@
 export default function UserReposData({userReposData}) {
-    console.log('userData : ', userReposData);
     return (
         <div>
             <ul className="list-disc pl-4">
