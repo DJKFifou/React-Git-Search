@@ -68,13 +68,13 @@ function App() {
       <h1 className="text-3xl font-bold text-red-500">React Git Search</h1>
       <div className="flex gap-2">
         <Input onChange={searchPersons} onKeyDown={(e) => e.key === 'Enter' && submit()} placeholder="Search user" className="border border-black rounded-lg p-1" />
-        <Button onClick={submit} className="border border-black rounded-lg p-1 bg-black text-white cursor-pointer">Rechercher</Button>
+        <Button onClick={submit} className="border border-black rounded-lg p-1 bg-black text-white cursor-pointer">Research</Button>
       </div>
       <div className="flex flex-col gap-4 w-full p-8">
-          <h2>Résultats : {datas?.total_count}</h2>
+          <h2>Results : {datas?.total_count ? datas?.total_count : 'None'}</h2>
           <div className="grid grid-cols-2">
             <div className="flex flex-col gap-2">
-              <p>Utilisateurs : </p>
+              <p>Users : </p>
               {datas && (
                 <Datas datas={datas} onClick={searchUser} />
               )}
